@@ -2,4 +2,37 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+#root {
+  --gradient-top: rgb(0, 30, 55) 50%;
+  --gradient-bottom: rgb(3, 54, 86) 50%;
+
+}
+
+@media (max-width: 950px) {
+  #root {
+    --gradient-top: rgb(0, 30, 55) 70%;
+    --gradient-bottom: rgb(3, 54, 86) 30%;
+
+  }
+
+}
+
+#root::before {
+  content: "";
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: -10;
+  top: 0;
+  left: 0;
+  background-image: radial-gradient(circle at top left, var(--gradient-top), var(--gradient-bottom));
+  transition: background-image 0.3s ease;
+}
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
