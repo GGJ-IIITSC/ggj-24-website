@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Squash as Hamburger } from "hamburger-react";
 import "./Navbar.css";
 
-export default function Navbar() {
+export default function Navbar({ parent }) {
   const [expand, setExpand] = useState(false);
 
   const NavToggle = () => {
@@ -23,19 +23,9 @@ export default function Navbar() {
     }
   };
 
-  window.addEventListener("scroll", () => {
-    const y = window.scrollY;
-    if (y > 10) {
-      document.getElementById("navbar").classList.add("navbar_on_move");
-    }
-    if (y < 10) {
-      document.getElementById("navbar").classList.remove("navbar_on_move");
-    }
-  });
-
   return (
     <>
-      <nav id="navbar">
+      <nav id="navbar" className="navbar_on_move" >
         <div className="mobview">
           <h1>
             GGJ-IIITS

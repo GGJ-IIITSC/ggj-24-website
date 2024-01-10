@@ -18,6 +18,7 @@ nav {
   -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
 }
+
 nav h1 {
   font-size: 30px;
   font-family: "Monomaniac One", sans-serif;
@@ -50,7 +51,7 @@ nav h1 img {
 
 #nav-right {
   display: flex;
-  width: 60%;
+  width: 50%;
   justify-content: space-between;
   align-items: center;
   max-width: 700px;

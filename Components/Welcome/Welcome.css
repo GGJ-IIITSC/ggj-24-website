@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+.welcome-super {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20px;
+}
+
+.welcome-inner {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.17);
+    box-shadow: 0px 0px 30px 30px rgba(0, 0, 0, 0.17);
+}
+
+@media (max-width:760px) {
+    .welcome-inner {
+        width: 100%;
+    }
+}
+
+.welcome-text h1 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 4rem;
+    text-align: center;
+}
+
+.animated-typing span {
+    color: rgba(255, 0, 0, 0.596);
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: monospace;
+}
