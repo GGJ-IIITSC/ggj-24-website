@@ -33,10 +33,10 @@ export function Warrior_toy(props) {
     tl.current
       .to(group.current.rotation, { x: 0, y: 0, z: 0 }, 0)
       .to(group.current.position, { x: 0, y: 0, z: 0 }, 0)
-      .to(group.current.rotation, { x: -1, y: -2, z: -0.7 }, 4)
-      .to(group.current.position, { x: -9, y: -5, z: 5 }, 4)
-      .to(group.current.rotation, { x: -1, y: -2, z: -0.7 }, 9)
-      .to(group.current.position, { x: -9, y: -2, z: 5 }, 9)
+      .to(group.current.rotation, { x: -1, y: -2, z: -0.7 }, 5)
+      .to(group.current.position, { x: -9, y: -5, z: 5 }, 5)
+      .to(group.current.rotation, { x: -1, y: -2, z: -0.7 }, 10)
+      .to(group.current.position, { x: -9, y: -2, z: 5 }, 10)
   }, [])
 
   return (

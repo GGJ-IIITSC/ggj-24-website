@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
 
 .welcome-super {
     width: 100vw;
@@ -25,15 +26,31 @@
     }
 }
 
+.welcome-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.welcome-text img {
+    width: 100px;
+    height: 100px;
+}
+
 .welcome-text h1 {
     font-family: 'Roboto Slab', serif;
     font-size: 4rem;
     text-align: center;
 }
 
+.animated-typing {
+    display: flex;
+    justify-content: center;
+}
+
 .animated-typing span {
-    color: rgba(255, 0, 0, 0.596);
-    font-size: 3rem;
+    color: rgb(252, 32, 32);
+    font-size: 2.5rem;
     font-weight: bold;
-    font-family: monospace;
+    font-family: 'Space Mono', monospace;
 }

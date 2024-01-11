@@ -3,19 +3,7 @@ import "./Footer.css"; // Import the corresponding CSS file
 
 export const Footer = () => {
 
-    const scrollToSection = (e) => {
-        e.preventDefault();
-        const targetId = e.target.getAttribute("href").substring(1);
-        const targetElement = document.getElementById(targetId);
-        if (targetElement) {
-            const offset = 50;
-            const targetPosition = targetElement.offsetTop - offset;
-            window.scrollTo({
-                top: targetPosition,
-                behavior: "smooth"
-            });
-        }
-    };
+
 
     return (
         <>
@@ -34,22 +22,22 @@ export const Footer = () => {
                         </a>
                     </li>
                     <li className="menu__item">
-                        <a className="menu__link" href="#about" onClick={scrollToSection}>
+                        <a className="menu__link" href="#about">
                             About
                         </a>
                     </li>
                     <li className="menu__item">
-                        <a className="menu__link" href="#news" onClick={scrollToSection}>
+                        <a className="menu__link" href="#news">
                             News
                         </a>
                     </li>
                     <li className="menu__item">
-                        <a className="menu__link" href="#schedule" onClick={scrollToSection}>
+                        <a className="menu__link" href="#schedule">
                             Schedule
                         </a>
                     </li>
                     <li className="menu__item">
-                        <a className="menu__link" href="#register" onClick={scrollToSection}>
+                        <a className="menu__link" href="#register">
                             Register
                         </a>
                     </li>

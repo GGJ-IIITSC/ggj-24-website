@@ -1,5 +1,4 @@
 import React from 'react';
-import Navbar from '../Components/Navbar/Navbar'
 import './App.css'
 import { Warrior } from '../Components/Warrior/Warrior';
 import { Welcome } from '../Components/Welcome/Welcome';
@@ -12,8 +11,14 @@ function App() {
       <Warrior >
         <div className="inner-warrior">
 
-          <Navbar />
           <Welcome />
+
+          <div className="banner-super">
+
+            <div className="banner-container">
+
+            </div>
+          </div>
 
           <Footer />
         </div>

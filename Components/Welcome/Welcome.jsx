@@ -7,6 +7,7 @@ export const Welcome = () => {
         <div className='welcome-super' >
             <div className='welcome-inner' >
                 <div className="welcome-text">
+                    <img src="/src/assets/ggj00-roundlogo-900x900.png" alt="" />
                     <h1>
                         Global Game Jam - IIITS
                     </h1>
