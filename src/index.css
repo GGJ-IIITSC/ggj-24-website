@@ -18,20 +18,6 @@ body,
   overflow: hidden;
 }
 
-#root {
-  --gradient-top: rgb(0, 30, 55) 50%;
-  --gradient-bottom: rgb(3, 54, 86) 50%;
-
-}
-
-@media (max-width: 950px) {
-  #root {
-    --gradient-top: rgb(0, 30, 55) 70%;
-    --gradient-bottom: rgb(3, 54, 86) 30%;
-
-  }
-
-}
 
 
 #root::before {
@@ -42,6 +28,7 @@ body,
   z-index: -10;
   top: 0;
   left: 0;
-  background-image: radial-gradient(circle at left, rgb(0, 25, 46), rgb(0, 54, 90));
+  /* background-image: radial-gradient(circle at left, rgb(0, 25, 46), rgb(0, 54, 90)); */
+  background: url('./assets/background.jpg');
   transition: background-image 0.3s ease;
 }

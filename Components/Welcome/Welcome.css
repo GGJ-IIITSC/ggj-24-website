@@ -20,11 +20,6 @@
     box-shadow: 0px 0px 30px 30px rgba(0, 0, 0, 0.17);
 }
 
-@media (max-width:760px) {
-    .welcome-inner {
-        width: 100%;
-    }
-}
 
 .welcome-text {
     display: flex;
@@ -53,4 +48,22 @@
     font-size: 2.5rem;
     font-weight: bold;
     font-family: 'Space Mono', monospace;
+    text-align: center;
+}
+
+@media (max-width:760px) {
+    .welcome-inner {
+        width: 100%;
+    }
+
+    .animated-typing span {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width:1160px) {
+
+    .animated-typing span {
+        font-size: 2rem;
+    }
 }
