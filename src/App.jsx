@@ -15,6 +15,7 @@ function App() {
 
             <Welcome />
 
+            <Footer />
 
             <div className="banner-super">
               <div className="banner-container">
@@ -22,7 +23,6 @@ function App() {
               </div>
             </div>
 
-            <Footer />
           </div>
         </Warrior>
 
