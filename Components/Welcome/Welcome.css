@@ -52,6 +52,11 @@
 }
 
 @media (max-width:760px) {
+
+    .welcome-super {
+        padding-right: 0;
+    }
+
     .welcome-inner {
         width: 100%;
     }
