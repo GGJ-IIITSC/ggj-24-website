@@ -8,7 +8,7 @@ export const Warrior = ({ children }) => {
     return (
         <ScrollControls pages={(window.innerWidth < 500) ? 3.85 : 3.5}  >
             <Environment preset={"warehouse"} />
-            <Scroll html style={{ height: "350vh" }} >
+            <Scroll html  >
                 {children}
             </Scroll>
             <Warrior_toy />
