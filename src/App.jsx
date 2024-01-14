@@ -3,27 +3,30 @@ import './App.css'
 import { Warrior } from '../Components/Warrior/Warrior';
 import { Welcome } from '../Components/Welcome/Welcome';
 import { Footer } from '../Components/Footer/Footer';
+import { Canvas } from '@react-three/fiber'
 
 function App() {
 
   return (
     <>
-      <Warrior >
-        <div className="inner-warrior">
+      <Canvas>
+        <Warrior >
+          <div className="inner-warrior">
 
-          <Welcome />
+            <Welcome />
 
-          <div className="banner-super">
 
-            <div className="banner-container">
+            <div className="banner-super">
+              <div className="banner-container">
 
+              </div>
             </div>
+
+            <Footer />
           </div>
+        </Warrior>
 
-          <Footer />
-        </div>
-      </Warrior>
-
+      </Canvas>
     </>
   )
 }
