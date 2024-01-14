@@ -6,7 +6,7 @@
     position: relative;
     width: 100%;
     background: rgb(29, 64, 117);
-    min-height: 50px;
+    height: 150px;
     padding: 20px 50px;
     display: flex;
     justify-content: center;
