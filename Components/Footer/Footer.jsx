@@ -17,28 +17,20 @@ export const Footer = () => {
                 </div>
                 <ul className="menu">
                     <li className="menu__item">
-                        <a className="menu__link" href="#">
-                            Home
+                        <a className="menu__link" href="https://www.iiits.ac.in/">
+                            <img src="/src/assets/COLLEGE_LOGO_WHITE.png" alt="IIITS" />
                         </a>
                     </li>
                     <li className="menu__item">
-                        <a className="menu__link" href="#about">
-                            About
+
+                        <a className="menu__link" href="https://www.iiits.ac.in/">
+                            <img src="/src/assets/iota_logo.png" alt="IIITS" />
                         </a>
                     </li>
                     <li className="menu__item">
-                        <a className="menu__link" href="#news">
-                            News
-                        </a>
-                    </li>
-                    <li className="menu__item">
-                        <a className="menu__link" href="#schedule">
-                            Schedule
-                        </a>
-                    </li>
-                    <li className="menu__item">
-                        <a className="menu__link" href="#register">
-                            Register
+
+                        <a className="menu__link" href="https://www.iiits.ac.in/">
+                            <img src="/src/assets/ggj00-roundlogo-900x900.png" alt="IIITS" />
                         </a>
                     </li>
                 </ul>

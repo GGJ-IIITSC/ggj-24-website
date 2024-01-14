@@ -44,6 +44,11 @@
     opacity: 1;
 }
 
+.menu__link img {
+    height: 35px;
+    width: 35px;
+}
+
 .footer p {
     color: #fff;
     margin: 15px 0 10px 0;
