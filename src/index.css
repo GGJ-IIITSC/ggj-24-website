@@ -28,7 +28,6 @@ body,
   z-index: -10;
   top: 0;
   left: 0;
-  /* background-image: radial-gradient(circle at left, rgb(0, 25, 46), rgb(0, 54, 90)); */
   background: url('./assets/background.jpg');
   transition: background-image 0.3s ease;
 }
