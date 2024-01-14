@@ -6,6 +6,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    overflow-y: auto;
 }
 
 @media (max-width: 770px) {
@@ -14,12 +15,12 @@
     }
 }
 
-@media (max-width: 500px) {
+/* @media (max-width: 500px) {
     .inner-warrior {
         padding-bottom: 25vh;
         overflow-y: auto;
     }
-}
+} */
 
 .banner-container {
     height: 550px;
