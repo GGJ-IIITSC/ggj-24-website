@@ -15,13 +15,14 @@ function App() {
 
             <Welcome />
 
-            <Footer />
 
             <div className="banner-super">
               <div className="banner-container">
 
               </div>
             </div>
+
+            <Footer />
 
           </div>
         </Warrior>
