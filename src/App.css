@@ -15,11 +15,6 @@
     }
 }
 
-@media (max-width: 500px) {
-    .inner-warrior {
-        height: 300vh;
-    }
-}
 
 .banner-container {
     height: 550px;
