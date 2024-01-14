@@ -29,14 +29,24 @@ export function Warrior_toy(props) {
   useLayoutEffect(() => {
     tl.current = gsap.timeline({ duration: 1, delay: 3, ease: 'power1.inout' })
 
+    if (window.innerWidth < 500) {
+      tl.current
+        .to(group.current.rotation, { x: -1, y: -2, z: -0.7 }, 0)
+        .to(group.current.position, { x: -9, y: -6, z: 0 }, 0)
+        .to(group.current.rotation, { x: -1, y: -2, z: -0.7 }, 5)
+        .to(group.current.position, { x: -9, y: -6, z: 0 }, 5)
+        .to(group.current.rotation, { x: -1, y: -2, z: -0.7 }, 10)
+        .to(group.current.position, { x: -9, y: -2, z: 0 }, 10)
+    } else {
 
-    tl.current
-      .to(group.current.rotation, { x: 0, y: 0, z: 0 }, 0)
-      .to(group.current.position, { x: 0, y: 0, z: 0 }, 0)
-      .to(group.current.rotation, { x: -1, y: -2, z: -0.7 }, 5)
-      .to(group.current.position, { x: -9, y: -5, z: 5 }, 5)
-      .to(group.current.rotation, { x: -1, y: -2, z: -0.7 }, 10)
-      .to(group.current.position, { x: -9, y: -2, z: 5 }, 10)
+      tl.current
+        .to(group.current.rotation, { x: 0, y: 0, z: 0 }, 0)
+        .to(group.current.position, { x: 0, y: 0, z: 0 }, 0)
+        .to(group.current.rotation, { x: -1, y: -2, z: -0.7 }, 5)
+        .to(group.current.position, { x: -9, y: -5, z: 5 }, 5)
+        .to(group.current.rotation, { x: -1, y: -2, z: -0.7 }, 10)
+        .to(group.current.position, { x: -9, y: -2, z: 5 }, 10)
+    }
   }, [])
 
   return (
