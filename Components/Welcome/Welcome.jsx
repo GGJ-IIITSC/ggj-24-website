@@ -1,30 +1,33 @@
-import React from 'react'
-import Typed from 'react-typed'
-import './Welcome.css'
+import React from 'react';
+import { TypeAnimation } from 'react-type-animation'; // Importing react-type-animation
+import './Welcome.css';
 
 export const Welcome = () => {
     return (
-        <div className='welcome-super' >
-            <div className='welcome-inner' >
+        <div className='welcome-super'>
+            <div className='welcome-inner'>
                 <div className="welcome-text">
                     <img src="/src/assets/ggj00-roundlogo-900x900.png" alt="" />
                     <h1>
                         Global Game Jam - IIITS
                     </h1>
                     <div className="animated-typing">
-                        <Typed
-                            strings={[
+                        {/* Using TypeAnimation from react-type-animation */}
+                        <TypeAnimation
+                            sequence={[
                                 'CODE, CREATE, CONQUER!',
+                                1000,
                                 'UNLOCK IDEAS, GAME ON!',
-                                'IGNITE, INNOVATE, PLAY!']}
-                            typeSpeed={40}
-                            backSpeed={50}
-                            loop
-                        >
-                        </Typed>
+                                1000,
+                                'IGNITE, INNOVATE, PLAY!'
+                            ]}
+                            wrapper="span"
+                            speed={50}
+                            repeat={Infinity}
+                        />
                     </div>
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
