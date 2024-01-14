@@ -1,13 +1,14 @@
 import React from 'react';
 import { TypeAnimation } from 'react-type-animation'; // Importing react-type-animation
 import './Welcome.css';
+import ggjLogo from "/src/assets/ggj00-roundlogo-900x900.png"
 
 export const Welcome = () => {
     return (
         <div className='welcome-super'>
             <div className='welcome-inner'>
                 <div className="welcome-text">
-                    <img src="/src/assets/ggj00-roundlogo-900x900.png" alt="" />
+                    <img src={ggjLogo} alt="" />
                     <h1>
                         Global Game Jam - IIITS
                     </h1>

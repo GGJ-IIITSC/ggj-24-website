@@ -1,5 +1,8 @@
 import React from "react";
-import "./Footer.css"; // Import the corresponding CSS file
+import "./Footer.css";
+import ggjLogo from "/src/assets/ggj00-roundlogo-900x900.png"
+import iotaLogo from "/src/assets/iota_logo.png"
+import iiitsLogo from "/src/assets/COLLEGE_LOGO_WHITE.png"
 
 export const Footer = () => {
 
@@ -18,19 +21,19 @@ export const Footer = () => {
                 <ul className="menu">
                     <li className="menu__item">
                         <a className="menu__link" href="https://www.iiits.ac.in/">
-                            <img src="/src/assets/COLLEGE_LOGO_WHITE.png" alt="IIITS" />
+                            <img src={iiitsLogo} alt="IIITS" />
                         </a>
                     </li>
                     <li className="menu__item">
 
                         <a className="menu__link" href="https://www.iiits.ac.in/">
-                            <img src="/src/assets/iota_logo.png" alt="IIITS" />
+                            <img src={iotaLogo} alt="IOTA" />
                         </a>
                     </li>
                     <li className="menu__item">
 
                         <a className="menu__link" href="https://www.iiits.ac.in/">
-                            <img src="/src/assets/ggj00-roundlogo-900x900.png" alt="IIITS" />
+                            <img src={ggjLogo} alt="GGJ" />
                         </a>
                     </li>
                 </ul>
