@@ -45,6 +45,7 @@ export const Footer = () => {
                     </li>
                 </ul>
                 <p>&copy;2024 GGJ-IIITS | All Rights Reserved</p>
+                <div className="bad-idea"></div>
             </footer>
         </>
     );
