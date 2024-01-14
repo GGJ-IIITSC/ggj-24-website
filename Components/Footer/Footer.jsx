@@ -2,6 +2,7 @@ import React from "react";
 import "./Footer.css";
 import ggjLogo from "/src/assets/ggj00-roundlogo-900x900.png"
 import iotaLogo from "/src/assets/iota_logo.png"
+import enigmaLogo from "/src/assets/enigma.jpg"
 import iiitsLogo from "/src/assets/COLLEGE_LOGO_WHITE.png"
 
 export const Footer = () => {
@@ -28,6 +29,12 @@ export const Footer = () => {
 
                         <a className="menu__link" href="https://www.iiits.ac.in/">
                             <img src={iotaLogo} alt="IOTA" />
+                        </a>
+                    </li>
+                    <li className="menu__item">
+
+                        <a className="menu__link" href="https://www.iiits.ac.in/">
+                            <img src={enigmaLogo} alt="IOTA" />
                         </a>
                     </li>
                     <li className="menu__item">

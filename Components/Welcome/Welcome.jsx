@@ -13,7 +13,6 @@ export const Welcome = () => {
                         Global Game Jam - IIITS
                     </h1>
                     <div className="animated-typing">
-                        {/* Using TypeAnimation from react-type-animation */}
                         <TypeAnimation
                             sequence={[
                                 'CODE, CREATE, CONQUER!',
