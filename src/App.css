@@ -20,7 +20,7 @@
     }
 }
 
-@media (max-height: 700px) and (max-height: 750px) and (max-width: 500px) {
+@media (max-width: 500px) {
     .inner-warrior {
         height: 300vh;
     }
