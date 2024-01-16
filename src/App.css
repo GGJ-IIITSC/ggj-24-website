@@ -14,7 +14,13 @@
     }
 }
 
-@media (max-height: 6500px) and (max-height: 700px) {
+@media (min-height: 650px) and (max-height: 700px) and (max-width: 700px) {
+    .inner-warrior {
+        height: 310vh;
+    }
+}
+
+@media (max-width: 500px) {
     .inner-warrior {
         height: 325vh;
     }
@@ -33,6 +39,40 @@
     border: 1px solid white;
 
     box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.17);
+}
+
+@media (max-width: 550px) {
+    .banner-container {
+        background: url('/src/assets/Banner-mobile.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-y: center;
+        height: 450px;
+        width: 450px;
+
+
+    }
+}
+
+@media (max-width: 450px) {
+    .banner-container {
+        height: 400px;
+        width: 400px;
+    }
+}
+
+@media (max-width: 400px) {
+    .banner-container {
+        height: 350px;
+        width: 350px;
+    }
+}
+
+@media (max-width: 350px) {
+    .banner-container {
+        height: 300px;
+        width: 300px;
+    }
 }
 
 .banner-super {

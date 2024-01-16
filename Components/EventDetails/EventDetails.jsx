@@ -2,6 +2,7 @@ import React from "react";
 import "./EventDetails.css"; // Don't forget to import your stylesheet
 
 const EventDetails = () => {
+
   return (
     <div className="Main_container">
       <div className="empty_container"></div>
