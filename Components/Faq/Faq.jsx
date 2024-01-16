@@ -4,15 +4,15 @@ import "./FaqContainer";
 import { FaqContainer } from "./FaqContainer";
 import "./FaqItem";
 import { FaqItem } from "./FaqItem";
+import { baseUrl, faqsEndpoint } from "../../api";
 
 export const Faq = () => {
   const [faqData, setFaqData] = useState([]);
 
   useEffect(() => {
     // Fetch the JSON file from the internet
-    fetch(
-      "https://gist.githubusercontent.com/aahnik/e2ecd24ba81742beff177a0c6950a7c9/raw/f707db2ed8912e7bb6413f023d47b1aedbd6677c/ggj-24-faq.json"
-    )
+    console.log(baseUrl + faqsEndpoint);
+    fetch(baseUrl + faqsEndpoint)
       .then((response) => response.json())
       .then((data) => setFaqData(data))
       .catch((error) => console.error("Error fetching FAQ data:", error));
