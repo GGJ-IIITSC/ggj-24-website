@@ -18,7 +18,7 @@ const EventDetails = () => {
                         <p className="payment_heading">VENUE: IIIT SRICITY</p>
                     </div>
                     <div className="event_fee">
-                        <p className="fee_heading">DATE: 25th - 28th JAN 2024</p>
+                        <p className="fee_heading">DATE: 26th - 28th JAN 2024</p>
                     </div>
                     <div className="QR_Fee">
                         <p className="QR_heading">TIMINGS: 5PM ONWARDS</p>
