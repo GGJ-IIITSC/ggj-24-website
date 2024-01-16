@@ -1,72 +1,32 @@
-import React from "react";
+import { useEffect, useState } from "react";
+import "./Faq.css";
+import "./FaqContainer";
+import { FaqContainer } from "./FaqContainer";
+import "./FaqItem";
+import { FaqItem } from "./FaqItem";
 
 export const Faq = () => {
+  const [faqData, setFaqData] = useState([]);
+
+  useEffect(() => {
+    // Fetch the JSON file from the internet
+    fetch(
+      "https://gist.githubusercontent.com/aahnik/e2ecd24ba81742beff177a0c6950a7c9/raw/f707db2ed8912e7bb6413f023d47b1aedbd6677c/ggj-24-faq.json"
+    )
+      .then((response) => response.json())
+      .then((data) => setFaqData(data))
+      .catch((error) => console.error("Error fetching FAQ data:", error));
+  }, []);
+
   return (
-    <div className="w-max-4xl text-center">
-      <div className="space-y-4 bg-opacity-0">
-        <details
-          className="group [&_summary::-webkit-details-marker]:hidden"
-          open
-        >
-          <summary className="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-black p-4 text-gray-50 bg-opacity-0">
-            <h2 className="font-medium">
-              Lorem ipsum dolor sit amet consectetur adipisicing?
-            </h2>
-
-            <svg
-              className="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M19 9l-7 7-7-7"
-              />
-            </svg>
-          </summary>
-
-          <p className="mt-4 px-4 leading-relaxed text-gray-700">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab hic
-            veritatis molestias culpa in, recusandae laboriosam neque aliquid
-            libero nesciunt voluptate dicta quo officiis explicabo consequuntur
-            distinctio corporis earum similique!
-          </p>
-        </details>
-
-        <details className="group [&_summary::-webkit-details-marker]:hidden">
-          <summary className="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-black p-4 text-gray-50 bg-opacity-0">
-            <h2 className="font-medium">
-              Lorem ipsum dolor sit amet consectetur adipisicing?
-            </h2>
-
-            <svg
-              className="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M19 9l-7 7-7-7"
-              />
-            </svg>
-          </summary>
-
-          <p className="mt-4 px-4 leading-relaxed text-gray-700">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab hic
-            veritatis molestias culpa in, recusandae laboriosam neque aliquid
-            libero nesciunt voluptate dicta quo officiis explicabo consequuntur
-            distinctio corporis earum similique!
-          </p>
-        </details>
-      </div>
-    </div>
+    <FaqContainer>
+      {faqData.map((faqItem) => (
+        <FaqItem
+          key={faqItem.id}
+          question={faqItem.question}
+          answer={faqItem.answer}
+        />
+      ))}
+    </FaqContainer>
   );
 };
