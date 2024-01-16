@@ -1,11 +1,25 @@
-import React from "react";
 import "keen-slider/keen-slider.min.css";
-import { useKeenSlider } from "keen-slider/react"; // import from 'keen-slider/react.es' for to get an ES module
+import { useKeenSlider } from "keen-slider/react";
 import "./Projects.css";
 
 export const Projects = () => {
-  const [sliderRef, instanceRef] = useKeenSlider(
+  const [keenSlider, instanceRef] = useKeenSlider(
     {
+      loop: true,
+      slides: {
+        origin: "left",
+        perView: 3,
+        spacing: 16,
+      },
+      breakpoints: {
+        "(min-width: 1024px)": {
+          slides: {
+            origin: "auto",
+            perView: 1.5,
+            spacing: 32,
+          },
+        },
+      },
       slideChanged() {
         console.log("slide changed");
       },
@@ -14,9 +28,10 @@ export const Projects = () => {
       // add plugins here
     ]
   );
+
   return (
     <div>
-      <section className="bg-black bg-opacity-25">
+      <section className="bg-gray-50 bg-opacity-100">
         <div className="mx-auto max-w-[1340px] px-4 py-12 sm:px-6 lg:me-0 lg:py-16 lg:pe-0 lg:ps-8 xl:py-24">
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-3 lg:items-center lg:gap-16">
             <div className="max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
@@ -29,12 +44,13 @@ export const Projects = () => {
                 sunt id!
               </p>
 
-              {/* Slider Controls */}
+              {/* Slider Controls for desktop */}
               <div className="hidden lg:mt-8 lg:flex lg:gap-4">
                 {/* Previous Slide Button */}
                 <button
                   aria-label="Previous slide"
                   id="keen-slider-previous-desktop"
+                  onClick={() => instanceRef.current.prev()}
                   className="rounded-full border border-rose-600 p-3 text-rose-600 transition hover:bg-rose-600 hover:text-white"
                 >
                   <svg
@@ -55,6 +71,7 @@ export const Projects = () => {
                 {/* Next Slide Button */}
                 <button
                   aria-label="Next slide"
+                  onClick={() => instanceRef.current.next()}
                   id="keen-slider-next-desktop"
                   className="rounded-full border border-rose-600 p-3 text-rose-600 transition hover:bg-rose-600 hover:text-white"
                 >
@@ -77,7 +94,7 @@ export const Projects = () => {
             </div>
 
             <div className="-mx-6 lg:col-span-2 lg:mx-0">
-              <div ref={sliderRef} id="keen-slider" className="keen-slider">
+              <div ref={keenSlider} id="keen-slider" className="keen-slider">
                 <div className="keen-slider__slide">
                   <a
                     href="#"
@@ -225,9 +242,12 @@ export const Projects = () => {
               </div>
             </div>
           </div>
+
+          {/* slide controls */}
           <div className="mt-8 flex justify-center gap-4 lg:hidden">
             <button
               aria-label="Previous slide"
+              onClick={() => instanceRef.current.prev()}
               id="keen-slider-previous"
               className="rounded-full border border-rose-600 p-4 text-rose-600 transition hover:bg-rose-600 hover:text-white"
             >
@@ -248,6 +268,7 @@ export const Projects = () => {
             </button>
             <button
               aria-label="Next slide"
+              onClick={() => instanceRef.current.next()}
               id="keen-slider-next"
               className="rounded-full border border-rose-600 p-4 text-rose-600 transition hover:bg-rose-600 hover:text-white"
             >
