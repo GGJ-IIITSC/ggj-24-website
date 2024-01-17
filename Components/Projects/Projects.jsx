@@ -24,15 +24,16 @@ function ProjectCard({
   projectDesc,
   teamMembers,
   techStack,
+  projectUrl,
 }) {
   return (
-    <div className={`keen-slider__slide number-slide${id} ProjectCard`}>
+    <div className={`keen-slider__slide number-slide${id}  `}>
       <a
-        href="#"
-        className="relative block overflow-hidden rounded-lg border shadow-md border-rose-800  p-4 sm:p-6 lg:p-8"
+        href={projectUrl}
+        className="ProjectCard m-auto relative block overflow-hidden rounded-lg border shadow-md border-rose-800  p-4 sm:p-6 lg:p-8 w-4/5 sm:w-[600px] lg:w-full"
       >
         <span className="absolute inset-x-0 bottom-0 h-2 bg-gradient-to-r from-rose-300 via-blue-500 to-purple-600" />
-        <div className="sm:flex sm:justify-between sm:gap-4">
+        <div className="flex justify-between sm:gap-4">
           <div>
             <h3 className="text-lg font-bold text-white sm:text-xl">
               {projectName}
@@ -41,7 +42,7 @@ function ProjectCard({
               By {teamName}
             </p>
           </div>
-          <div className="hidden sm:block sm:shrink-0">
+          <div className=" sm:block sm:shrink-0">
             <img
               alt={teamName}
               src={projectLogoUrl}
@@ -139,7 +140,6 @@ function SliderControls({ instanceRef }) {
             d="M9 5l7 7-7 7"
             strokeLinecap="round"
             strokeLinejoin="round"
-            strokeWidth={2}
           />
         </svg>
       </button>
@@ -161,7 +161,6 @@ function SliderControls({ instanceRef }) {
             d="M9 5l7 7-7 7"
             strokeLinecap="round"
             strokeLinejoin="round"
-            strokeWidth={2}
           />
         </svg>
       </button>
@@ -190,7 +189,7 @@ export const Projects = () => {
             "(min-width: 1024px)": {
               slides: {
                 origin: "auto",
-                perView: 1.5,
+                perView: 1.75,
                 spacing: 32,
               },
             },
@@ -208,9 +207,9 @@ export const Projects = () => {
   return (
     <div>
       <section className="ProjectsContainer">
-        <div className="mx-auto max-w-[1340px] px-4 py-12 sm:px-6 lg:py-16 lg:pe-0 lg:ps-8 xl:py-24">
+        <div className="mx-auto  px-4 py-12 sm:px-6 lg:py-16 lg:pe-0 lg:ps-8 xl:py-24">
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-3 lg:items-center lg:gap-16">
-            <div className="max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
+            <div className="max-w-xl text-center ltr:lg:text-left m-auto">
               <ProjectSectionHeader title={"Global Game Jam 2023 Projects"} />
               <ProjectSectionDesc
                 desc={
@@ -232,6 +231,7 @@ export const Projects = () => {
                     projectDesc={project.projectDesc}
                     teamMembers={project.teamMembers.join(", ")}
                     techStack={project.techStack.join(", ")}
+                    projectUrl={project.projectUrl}
                   />
                 ))}
               </div>
