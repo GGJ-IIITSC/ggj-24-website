@@ -1,38 +1,35 @@
-import React from 'react';
-import './App.css'
-import { Warrior } from '../Components/Warrior/Warrior';
-import { Welcome } from '../Components/Welcome/Welcome';
-import { Footer } from '../Components/Footer/Footer';
-import { Canvas } from '@react-three/fiber'
-import EventDetails from '../Components/EventDetails/EventDetails';
+import React from "react";
+import "./App.css";
+import { Warrior } from "../Components/Warrior/Warrior";
+import { Welcome } from "../Components/Welcome/Welcome";
+import { Footer } from "../Components/Footer/Footer";
+import { Canvas } from "@react-three/fiber";
+import EventDetails from "../Components/EventDetails/EventDetails";
+import { Projects } from "../Components/Projects/Projects";
+import { Faq } from "../Components/Faq/Faq";
 
 function App() {
-
   return (
     <>
       <Canvas>
-        <Warrior >
+        <Warrior>
           <div className="inner-warrior">
-
             <Welcome />
 
-
             <div className="banner-super">
-              <div className="banner-container">
-
-              </div>
+              <div className="banner-container"></div>
             </div>
 
             <EventDetails />
+            <Projects />
+            <Faq />
 
             <Footer />
-
           </div>
         </Warrior>
-
       </Canvas>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

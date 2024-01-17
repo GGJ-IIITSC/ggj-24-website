@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.ProjectsContainer {
+  /* background: linear-gradient(
+    93deg,
+    rgba(33, 0, 91, 1) 0%,
+    rgba(27, 24, 60, 1) 22%,
+    rgba(11, 3, 96, 1) 90%
+  ); */
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.ProjectCard {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.TitleText {
+  color: rgb(240, 2, 42);
+}
+
+.BodyText {
+  color: rgb(247, 60, 91);
+}
