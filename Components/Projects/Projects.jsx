@@ -17,6 +17,7 @@ function ProjectSectionDesc({ desc }) {
 }
 
 function ProjectCard({
+  id,
   projectName,
   teamName,
   projectLogoUrl,
@@ -25,7 +26,7 @@ function ProjectCard({
   techStack,
 }) {
   return (
-    <div className="keen-slider__slide ProjectCard">
+    <div className={`keen-slider__slide number-slide${id} ProjectCard`}>
       <a
         href="#"
         className="relative block overflow-hidden rounded-lg border shadow-md border-rose-800  p-4 sm:p-6 lg:p-8"
@@ -169,46 +170,45 @@ function SliderControls({ instanceRef }) {
 }
 
 export const Projects = () => {
-  const [sliderRef, instanceRef] = useKeenSlider(
-    {
-      loop: true,
-      slides: {
-        origin: "auto",
-        perView: 1,
-        spacing: 32,
-      },
-      breakpoints: {
-        "(min-width: 1024px)": {
-          slides: {
-            origin: "auto",
-            perView: 1.5,
-            spacing: 32,
-          },
-        },
-      },
-      slideChanged() {
-        console.log("slide changed");
-      },
-    },
-    [
-      // add plugins here
-    ]
-  );
-
   const [projectData, setProjectData] = useState([]);
+  const [options, setOptions] = useState({});
 
   useEffect(() => {
     // Fetch the JSON file from the internet
     fetch(baseUrl + projectsEndpoint)
       .then((response) => response.json())
-      .then((data) => setProjectData(data))
+      .then((data) => {
+        setProjectData(data);
+        setOptions({
+          loop: true,
+          slides: {
+            origin: "auto",
+            perView: 1,
+            spacing: 32,
+          },
+          breakpoints: {
+            "(min-width: 1024px)": {
+              slides: {
+                origin: "auto",
+                perView: 1.5,
+                spacing: 32,
+              },
+            },
+          },
+          slideChanged() {
+            console.log("slide changed");
+          },
+        });
+      })
       .catch((error) => console.error("Error fetching project data:", error));
   }, []);
+
+  const [sliderRef, instanceRef] = useKeenSlider(options, []);
 
   return (
     <div>
       <section className="ProjectsContainer">
-        <div className="z-10 mx-auto max-w-[1340px] px-4 py-12 sm:px-6 lg:me-50 lg:py-16 lg:pe-0 lg:ps-8 xl:py-24">
+        <div className="mx-auto max-w-[1340px] px-4 py-12 sm:px-6 lg:py-16 lg:pe-0 lg:ps-8 xl:py-24">
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-3 lg:items-center lg:gap-16">
             <div className="max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
               <ProjectSectionHeader title={"Global Game Jam 2023 Projects"} />
@@ -225,6 +225,7 @@ export const Projects = () => {
                 {projectData.map((project) => (
                   <ProjectCard
                     key={project.id} // Assuming each project has a unique identifier
+                    id={project.id}
                     projectName={project.projectName}
                     teamName={project.teamName}
                     projectLogoUrl={project.projectLogoUrl}
