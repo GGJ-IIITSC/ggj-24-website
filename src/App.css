@@ -1,6 +1,6 @@
 .inner-warrior {
     width: 100%;
-    height: 350vh;
+    height: 500vh;
     padding-right: 20px;
     position: relative;
     display: flex;
@@ -22,7 +22,7 @@
 
 @media (max-width: 500px) {
     .inner-warrior {
-        height: 325vh;
+        height: 450vh;
     }
 }
 
