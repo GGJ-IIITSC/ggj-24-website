@@ -73,7 +73,7 @@ function ProjectCard({
 
 function DesktopSliderControls({ instanceRef }) {
   return (
-    <div className="hidden lg:mt-8 lg:flex lg:gap-4" style={{ display: 'flex', justifyContent: "space-evenly" }} >
+    <div className="hidden lg:mt-8 lg:flex lg:gap-4" style={{ justifyContent: "space-evenly" }} >
       {/* Previous Slide Button */}
       <button
         aria-label="Previous slide"
