@@ -26,6 +26,12 @@ export const Welcome = () => {
                             repeat={Infinity}
                         />
                     </div>
+                    <a href="https://forms.gle/PXdPExzemKP3ukBD9" target="_blank" rel="noopener noreferrer" className="btn-container">
+                        <button className="button" data-text="Awesome">
+                            <span className="actual-text">&nbsp;Register_Now!&nbsp;</span>
+                            <span aria-hidden="true" className="hover-text">&nbsp;Register_Now!&nbsp;</span>
+                        </button>
+                    </a>
                 </div>
             </div>
         </div>
