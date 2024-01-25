@@ -3,7 +3,7 @@ import "./Faq.css";
 
 export const FaqItem = ({ question, answer }) => {
   return (
-    <details className="group [&_summary::-webkit-details-marker]:hidden" open>
+    <details className="group [&_summary::-webkit-details-marker]:hidden" >
       <summary className="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg p-4 bg-opacity-0">
         <h2 className="font-extrabold text-lg FaqHeading">{question}</h2>
 
@@ -23,7 +23,7 @@ export const FaqItem = ({ question, answer }) => {
         </svg>
       </summary>
 
-      <p className="mt-4 px-4 leading-relaxed FaqText font-medium">{answer}</p>
+      <p className="mt-4 px-4 leading-relaxed FaqText font-medium max-h-[190px] overflow-auto ">{answer}</p>
     </details>
   );
 };
