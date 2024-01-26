@@ -7,6 +7,7 @@ import { Canvas } from "@react-three/fiber";
 import EventDetails from "../Components/EventDetails/EventDetails";
 import { Projects } from "../Components/Projects/Projects";
 import { Faq } from "../Components/Faq/Faq";
+import { Sponsors } from "../Components/Sponsors/Sponsors";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
             <EventDetails />
             <Projects />
             <Faq />
+            <Sponsors />
 
             <Footer />
           </div>
