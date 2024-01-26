@@ -9,7 +9,12 @@ export const Sponsors = () => {
         <div className='sponsors' >
             <h1>Our Sponsors</h1>
             <div className="sponsors-holder">
-                <img src={Lavazza} alt="" /><img src={Deeplink} alt="" /><img src={Imsk} alt="" />
+                <a href="https://www.lavazza.com/" target="_blank" rel="noopener noreferrer"><img src={Lavazza} alt="" /></a>
+                <a href="https://deeplink.cloud/" target="_blank" rel="noopener noreferrer"><img src={Deeplink} alt="" /></a>
+                <a href="http://imsk.net/" target="_blank" rel="noopener noreferrer"><img src={Imsk} alt="" /></a>
+
+
+
             </div>
         </div>
     )
